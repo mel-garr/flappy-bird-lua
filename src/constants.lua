@@ -14,6 +14,12 @@ ground_scroll_speed = 60
 background_looping_point = 413
 
 GRAVITY = 20
+scroling = true
+PIPE_SCROLL = -60
+
+PIPE_SPEED = 60
+PIPE_HEIGHT = 430
+PIPE_WIDTH = 70
 
 gfonts = {
     ['small'] = love.graphics.newFont('fonts/font.ttf', 8),
@@ -32,7 +38,7 @@ gSounds = {
 
 gStateMachine = StateMachine{
     ['title'] = function() return TitleScreenState() end,
-    ['countdown'] = function() return countdownState() end,
+    ['countdown'] = function() return CountdownState() end,
     ['play'] = function() return PlayState() end,
     ['score'] = function() return ScoreState() end
 }
